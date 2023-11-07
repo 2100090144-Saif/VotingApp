@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" th:href="@{/css/about.css}" />
+</head>
+<body>
+	<section class = "center">
+	
+
+<font size="+5"><h3 style="color:gold">About Me</h3></font>
+		<div th:if=${session.msg}>
+			<h3 th:text="${session.msg}" style="color:red"></h3>
+   		
+   		<div th:text="${@sessionUtilityBean.removeVerificationMessageFromSession()}"></div>
+   		</div>
+   		
+
+	<br>	
+	
+    <nobr>
+		<!--<img th:src="@{/image/teams.png}" alt="about" width="100" height="100">-->
+    
+    <img th:src="@{/image/Saif.jpeg}" alt="about" width="100" height="100">
+    
+  </nobr>
+  <div class="about-container">
+  <p>I am Md Saif, a third-year student pursuing a degree B.Tech in Computer Science and Information Technology
+	   (CSIT) with a specialization in Data Science and Big Data. Recently, I had the opportunity to attend a workshop 
+	   
+	   hosted by BVR Mohan Reddy on innovation and entrepreneurship. During this event, I had the pleasure of meeting 
+	   esteemed professors and fellow students who share my passion for exploring the frontiers of technology. 
+	   I am dedicated to leveraging my skills in data science to drive innovation and make a meaningful
+	   impact in this dynamic field. Let's connect and collaborate to make a difference together!</p>
+  </div>
+  
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+	<link rel="stylesheet" th:href="@{/css/bootstrap2.css}" />
+	<link rel="stylesheet" th:href="@{/css/table.css}" />
+    <title th:text="${title}">Title</title>
+  </head>
+  <body> 
+    <div class="wrapper">
+		<img class="logo" th:src="@{/image/logo.jpg}">
+         <nav class="navbar">
+         
+         <!-- Navbar -->
+ 
+         <ul>
+            <li><a class="active" th:href="@{/user/}">Home</a></li>
+             <li><a>Welcome <span th:text="${user.name}"></span></a></li>
+            <li><a th:href="@{/logout}">Logout</a></li>
+          </ul>
+ 
+         <!-- Navbar End -->
+         </nav>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<footer>
+        <div class="footer-content">
+            <h3>VotingAp</h3>
+            <p>This app is only based for those users who are 18 or 18+ are only elligible to give the vote.</p>
+            <ul class="social-icon">
+                <a class="social-icon" href="https://twitter.com/NandaKishoreJa7">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a class="social-icon" href="https://www.linkedin.com/in/nanda-kishore-jana-22288b226/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a class="social-icon" href="https://www.instagram.com/nandakishorejana624/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a class="social-icon" href="https://www.facebook.com/profile.php?id=100080281449882">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            </ul>
+        </div>
+        <div class="footer-bottom"> 
+            <p>copyright &copy; 2023 VotingAp. designed by <span>NandaKishoreJana</span></p> 
+        </div>
+    </footer>
+         <center><div class="center">
+         
+         
+     </div>
+      
+         
+      
+     <div th:replace="${content}">
+    
+     </div>
+     
+       </div>
+     
+   
+   
+   
+  
+     
+   </body>
+ </html>
