@@ -37,7 +37,7 @@ Start the application:
 bash
 Copy code
 npm start
-Open your browser and go to http://localhost:3000 to view the app.
+Open your browser and go to http://localhost:8080 to view the app.
 
 Usage
 Sign up or log in to your account.
